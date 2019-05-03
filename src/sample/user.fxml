@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1076.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UserController">
+   <children>
+      <AnchorPane fx:id="view_product" layoutY="105.0" prefHeight="500.0" prefWidth="1076.0" style="-fx-background-color: #f0f0f0;" visible="false">
+         <children>
+            <TableView fx:id="table_product" prefHeight="500.0" prefWidth="672.0">
+               <columns>
+                  <TableColumn fx:id="code_product" prefWidth="96.79998779296875" text="Код товара" />
+                  <TableColumn fx:id="name_product" prefWidth="200.79995727539062" text="Наименование" />
+                  <TableColumn fx:id="amount_product" prefWidth="122.4000244140625" text="Количество" />
+                  <TableColumn fx:id="location_product" prefWidth="115.20001220703125" text="Расположение" />
+                  <TableColumn fx:id="provider_product" prefWidth="172.00006103515625" text="Поставщик" />
+               </columns>
+            </TableView>
+            <TextField fx:id="id_order_field" layoutX="685.0" layoutY="12.0" prefHeight="26.0" prefWidth="252.0" promptText="Номер заказа" style="-fx-background-color: lightgrey;" />
+            <TextField fx:id="amount_order_field" layoutX="685.0" layoutY="116.0" prefHeight="26.0" prefWidth="252.0" promptText="Количетво" style="-fx-background-color: lightgrey;" />
+            <TextField fx:id="ordered_product_field" layoutX="685.0" layoutY="46.0" prefHeight="26.0" prefWidth="252.0" promptText="Заказываем товар" style="-fx-background-color: lightgrey;" />
+            <Button fx:id="add_order" layoutX="960.0" layoutY="46.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" style="-fx-background-radius: 4;" text="Добавить" />
+            <TextField fx:id="mail_order_field" layoutX="685.0" layoutY="153.0" prefHeight="26.0" prefWidth="252.0" promptText="Почта" style="-fx-background-color: lightgrey;" />
+            <TextField fx:id="customer_order_field" layoutX="685.0" layoutY="79.0" prefHeight="26.0" prefWidth="252.0" promptText="Заказчик" style="-fx-background-color: lightgrey;" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="255.0" text="Storage">
+         <font>
+            <Font name="Snap ITC" size="42.0" />
+         </font>
+      </Label>
+      <Label layoutX="494.0" layoutY="14.0" text="Пользователь">
+         <font>
+            <Font name="Franklin Gothic Medium" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="back_user" layoutX="976.0" layoutY="10.0" mnemonicParsing="false" text="Выход">
+         <font>
+            <Font name="Snap ITC" size="20.0" />
+         </font>
+      </Button>
+      <ToolBar focusTraversable="false" layoutY="56.0" prefHeight="43.0" prefWidth="704.0">
+         <items>
+            <Button fx:id="make_order" mnemonicParsing="false" prefHeight="32.0" prefWidth="240.0" text="Сделать заказ" />
+            <Button fx:id="report" mnemonicParsing="false" prefHeight="32.0" prefWidth="219.0" text="Отчёт " />
+            <Button fx:id="graphic" mnemonicParsing="false" prefHeight="32.0" prefWidth="212.0" text="Графика" />
+         </items>
+      </ToolBar>
+      <AnchorPane fx:id="view_graphic" layoutY="105.0" prefHeight="500.0" prefWidth="1076.0" style="-fx-background-color: #f0f0f0;">
+         <children>
+            <PieChart fx:id="piechart" layoutX="247.0" layoutY="14.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
